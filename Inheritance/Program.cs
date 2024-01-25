@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Diagnostics;
 
 namespace Inheritance
 {
@@ -6,21 +8,27 @@ namespace Inheritance
     {
         static void Main(string[] args)
         {
-            // TODO Be sure to follow best practice when creating your classes
+     
+            Bird bird1 = new Bird();
+            bird1.Beaks = "crow";
+            bird1.HasFeathers = true;
+            bird1.HasBones = true;
+            bird1.Legs = 2;
 
-            // Create a class Animal
-            // give this class 4 members that all Animals have in common
+            Reptile reptile1 = new Reptile();
+            {
+                reptile1.Scales = true;
+                reptile1.Color = "snakes";
+                reptile1.Old = "turtles";
+                reptile1.ColdBlooded = true;
+            };
 
 
-            // Create a class Bird
-            // give this class 4 members that are specific to Bird
-            // Set this class to inherit from your Animal Class
-
-            // Create a class Reptile
-            // give this class 4 members that are specific to Reptile
-            // Set this class to inherit from your Animal Class
+            bird1.PrintBirdDetails();
 
 
+
+            reptile1.PrintReptileDetails();
 
 
             /*Create an object of your Bird class
